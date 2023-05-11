@@ -4,6 +4,7 @@ import { Box, Flex, Text, Avatar} from '@chakra-ui/react';
 import {BsGridFill} from 'react-icons/bs';
 import {GoVerified} from 'react-icons/go';
 import millify from 'millify';
+import {FaBed, FaBath} from '../node_modules/react-icons/fa'
 
 import defaultImage from '../assets/house.jpg';
 
@@ -23,6 +24,15 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
               AED {millify(price)}{ rentFrequency && `/${rentFrequency}`}
             </Text>
           </Flex>
+          <Box>
+            <Avatar size="sm" src={agency?.logo.url} />
+          </Box>
+          <Flex alightItems="center" p="1" justifyContent="space-between" w="250px" color="blue.400">
+            {rooms} <FaBed /> |  {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
+          </Flex>
+          <Text fontSize="lg">
+            {title.length > 30 ? `${title.substring(0, 30)}...` : title}
+          </Text>
         </Flex>
       </Box>
     </Flex>
