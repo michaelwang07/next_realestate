@@ -3,9 +3,6 @@ import {Box} from '@chakra-ui/react';
 
 const Layout = ({ children }) => {
   return (
-    <Head>
-      <title>Real Estate</title>
-    </Head>>
     <Box maxWidth="1290px" m="auto">
         <header>
           Navbar

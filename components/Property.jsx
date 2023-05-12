@@ -14,7 +14,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
       <Box>
         <Image src={coverPhoto ? coverPhoto.url : defaultImage} width={400} height={260} alt='house' />
       </Box>
-      <Box>
+      <Box w='full'>
         <Flex paddingTop='2' alightItems="center" justifyContent="space-between">
           <Flex alignItems="center">
             <Box paddingRight="3" color="green.400">
