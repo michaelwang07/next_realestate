@@ -27,6 +27,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
           <Box>
             <Avatar size="sm" src={agency?.logo.url} />
           </Box>
+          
           <Flex alightItems="center" p="1" justifyContent="space-between" w="250px" color="blue.400">
             {rooms} <FaBed /> |  {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
           </Flex>
