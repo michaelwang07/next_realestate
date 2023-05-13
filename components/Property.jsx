@@ -12,7 +12,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
   <Link href={`/property/${externalID}`} passHref>
     <Flex flexWrap="wrap" w="420px" p="5" paddingTop="0" justifyContent="flex-start" cursor="pointer">
       <Box>
-        <Image src={coverPhoto ? coverPhoto.url : defaultImage} width={400} height={260} alt='house' />
+        <Image src={coverPhoto ? coverPhoto.url : defaultImage} width={400} height={260} alt='house' fit="cover"/>
       </Box>
       <Box w='full'>
         <Flex paddingTop='2' alightItems="center" justifyContent="space-between">
@@ -25,16 +25,15 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
             </Text>
           </Flex>
           <Box>
-            <Avatar size="sm" src={agency?.logo.url} />
+            <Avatar size="sm" src={agency?.logo.url}></Avatar>
           </Box>
-          
-          <Flex alightItems="center" p="1" justifyContent="space-between" w="250px" color="blue.400">
-            {rooms} <FaBed /> |  {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
-          </Flex>
-          <Text fontSize="lg">
-            {title.length > 30 ? `${title.substring(0, 30)}...` : title}
-          </Text>
         </Flex>
+        <Flex alightItems="center" p="1" justifyContent="space-between" w="250px" color="blue.400">
+          {rooms} <FaBed /> |  {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
+        </Flex>
+        <Text fontSize="lg">
+          {title.length > 30 ? `${title.substring(0, 30)}...` : title}
+        </Text>
       </Box>
     </Flex>
   </Link>
