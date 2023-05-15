@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <Flex p="2" boerderBottom="1px" borderColor="gray.100">
       <Box fontSize="3xl" color="blue.400" fontWeight="bold">
-        <Link href="/" paddingLeft="2">Realtor</Link>
+        <Link href="/" paddingLeft="2">My Realtor App</Link>
       </Box>
       <Spacer />
       <Box>
